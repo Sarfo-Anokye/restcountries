@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import Header from './header';
 import Filter from './filter';
-import Country from './country';
+import Country from './countries';
 function Home() {
     const [countries, setCountries]=useState([]);
     useEffect(()=>{
@@ -50,8 +50,8 @@ function Home() {
       <Filter searchCountry={searchCountry} searchRegion={searchRegion}/>
       <div className='country_container'>
      {
-      countries.map(country=>(
-           <Link to={{pathname:'details' , state:country}}>
+      countries.map((country,index)=>(
+           <Link to={`/details/${country.name}`} key={index}>
         <Country
         key={country.alpha2Code}
         name={country.name}

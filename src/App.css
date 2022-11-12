@@ -57,7 +57,7 @@
   line-height: 20px;
   color: #111517;
 }
-/* stlying country component */
+/* stlying countries component */
 .country_container{
   /* border: red 1px solid; */
   margin-top: 48px;
@@ -66,6 +66,7 @@
   display: flex;
   column-gap: 75px;
   justify-content: space-between;
+  row-gap: 94px;
 }
 .country{
   height:325px;
@@ -107,4 +108,62 @@
   font-size: 14px;
   line-height: 16px;
   color: #111517;
+}
+/* styling details component */
+.details_container button{
+  margin-top: 80px;
+  margin-left: 80px;
+  
+}
+.back_button{
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* styling country component */
+.detailsx{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border:red 2px solid;
+  
+}
+.details_information{
+  width:598px;
+}
+.details_information h3{
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111517;
+}
+.columns{
+  display: flex;
+  justify-content: space-between;
+  /* border:red 2px solid; */
+  
+}
+.inner_text{
+  /* background:#F2F2F2; */
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 18px;
+  
+}
+
+.detailsx img{
+  width: 560px;
+ height:401px;
+ border:red 2px solid;
+}
+.column_1{
+  margin-top: 0px;
 }

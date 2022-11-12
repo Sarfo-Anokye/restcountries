@@ -1,49 +1,24 @@
-
 import React from 'react';
-import {useState, useEffect} from 'react';
 import './App.css';
-import Header from './components/header';
-import Filter from './components/filter';
-import Country from './components/country';
+import {BrowserRouter as Router, Route, } from 'react-router-dom';
+import Details from './components/details';
+import Home from './components/home';
+
 
 function App() {
-  const [countries, setCountries]=useState([]);
-
-  useEffect(()=>{
-    try{
-      fetchData()
-    }catch(error){
-      console.log(error)
-    }
-  })
-
-  const fetchData=async ()=>{
-    const response= await fetch("https://restcountries.com/v2/all");
-    const data= await response.json();
-    setCountries(data);
-    console.log(countries)
-  }
-
+ 
   return (
+    <Router>
     <div className='main'>
-      <Header/>
-      <Filter/>
-     <div className='country_container'>
-     {
-       countries.map(country=>(
-        <Country
-        key={country.alpha2Code}
-        name={country.name}
-        region={country.region}
-        population={country.population}
-        capital={country.capital}
-        flag={country.flag}
-        />
-        ) )
-     };
-  
-    </div>
+      <Route exact path='/'>
+      <Home/>
+      </Route>
+      <Route path='/details/:name' >
+      <Details/>
+      </Route>
    </div>
+  
+   </Router>
   )
 };
 
