@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Header from './header';
 import Filter from './filter';
 import Country from './countries';
-function Home() {
+function Home({darkmode,toggleDarkMode}) {
     const [countries, setCountries]=useState([]);
     useEffect(()=>{
         try{
@@ -46,12 +46,12 @@ function Home() {
        
   return (
     <div>
-      <Header/>
-      <Filter searchCountry={searchCountry} searchRegion={searchRegion}/>
+      <Header darkmode={darkmode}  toggleDarkMode={toggleDarkMode}/>
+      <Filter darkmode={darkmode}  searchCountry={searchCountry} searchRegion={searchRegion}/>
       <div className='country_container'>
      {
       countries.map((country,index)=>(
-           <Link to={`/details/${country.name}`} key={index}>
+           <Link style={{textDecoration:"none"}} to={`/details/${country.name}`} key={index}>
         <Country
         key={country.alpha2Code}
         name={country.name}
@@ -59,10 +59,11 @@ function Home() {
         population={country.population}
         capital={country.capital}
         flag={country.flag}
+        darkmode={darkmode}
         />
         </Link>
         ) )
-     };
+     }
   
     </div>
     </div>

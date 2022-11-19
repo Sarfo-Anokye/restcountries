@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from "react-router-dom";
 import Header from './header';
 import Country from './country';
-export default function Details() {
+      
+export default function Details({darkmode,toggleDarkMode}) {
     const [country,setCountry]=useState([]);
     const history=useHistory();
     const {name}=useParams();
@@ -26,13 +27,16 @@ export default function Details() {
   
    
   return (
-    <div className='details_container'>
-     <Header/>
-     <button className='back_button' onClick={()=>goBack()} ><i class="fa-solid fa-arrow-left"></i> Back</button>
+    <div className={`details_container ${darkmode? 'dark' : '' }`}>
+     <Header darkmode={darkmode} toggleDarkMode={toggleDarkMode}/>
+     <div className={`button_holder ${darkmode? 'dark' : '' }`}>
+        <i class="fa-solid fa-arrow-left"></i>
+        <button className='back_button' onClick={()=>goBack()} > Back</button>
+    </div>
      
      {
          country.map(val=>(
-            <Country key={country.alpha2Code} name={val.name} population={val.population} capital={val.capital} region={val.region} subregion={val.subregion} nativeName={val.nativeName} flag={val.flag} languages={val.languages} currencies={val.currencies} topLevelDomain={val.topLevelDomain}/>
+            <Country darkmode={darkmode} key={val.alpha2Code} name={val.name} population={val.population} capital={val.capital} region={val.region} subregion={val.subregion} nativeName={val.nativeName} flag={val.flag} languages={val.languages} currencies={val.currencies} topLevelDomain={val.topLevelDomain} borders={val.borders}/>
          ))
      }
       
