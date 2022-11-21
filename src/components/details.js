@@ -29,9 +29,9 @@ export default function Details({darkmode,toggleDarkMode}) {
   return (
     <div className={`details_container ${darkmode? 'dark' : '' }`}>
      <Header darkmode={darkmode} toggleDarkMode={toggleDarkMode}/>
-     <div className={`button_holder ${darkmode? 'dark' : '' }`}>
+     <div className={`button_holder ${darkmode? 'dark' : '' }` } onClick={()=>goBack()}>
         <i class="fa-solid fa-arrow-left"></i>
-        <button className='back_button' onClick={()=>goBack()} > Back</button>
+        <button className='back_button'  >Back </button>
     </div>
      
      {

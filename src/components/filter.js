@@ -6,7 +6,7 @@ export default function Filter({searchCountry , searchRegion, darkmode}) {
    <div className='inputs' >
         <div className={`search ${darkmode? 'dark':''}`} >
         <i class="fa-solid fa-magnifying-glass"></i>
-            <input className={`inp ${darkmode? 'dark' : '' }`} type='text' onChange={(e)=>searchCountry(e.target.value)} placeholder='Search for a country' />
+            <input className={`inp ${darkmode? 'dark' : '' }`} type='text' onChange={(e)=>searchCountry(e.target.value)} placeholder='Search for a country...' />
         </div>
 
         <div className={`input_select ${darkmode? 'dark':''}`} >  

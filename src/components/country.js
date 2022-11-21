@@ -33,7 +33,7 @@ function Country({name,population,capital,region,subregion,flag, languages, curr
                         <h3 className='name'> Languages: <span className='inner_text'>{lang.join(', ')}</span> </h3>
                     </div>
                 </div> 
-                <h3>Border Countries:<span>{borders? borders.map(val=>(<button className='border_button'>{val}</button>)):''} </span></h3>
+                <h3 className='bh2'>Border Countries:<span className='span-borders'>{borders? borders.map(val=>(<button className={`border_button ${darkmode?'dark' : ''}`}>{val}</button>)):''} </span></h3>
             </div>
 
 
