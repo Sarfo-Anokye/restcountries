@@ -1,7 +1,7 @@
 import React from 'react'
 
-
-export default function Header({darkmode,toggleDarkMode}) {
+// componen for rendering the heeader
+export default function Header({darkmode,toggleDarkMode}) { //detructuring props passed from Home component
   return (
 <div className={`header ${darkmode?'dark' : ''}`}>
    <div className='header_container'>

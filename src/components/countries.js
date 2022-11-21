@@ -1,7 +1,9 @@
 import React from 'react'
-// import { Link} from 'react-router-dom';
-
-export default function Country({name,population,region,capital,flag,darkmode }) {
+/*
+country component resonsible for redering
+individual countries flag and their details
+*/
+export default function Country({name,population,region,capital,flag,darkmode }) { //destructing props from home country component 
     
   return (
     

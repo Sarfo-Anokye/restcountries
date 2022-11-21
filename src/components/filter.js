@@ -1,6 +1,9 @@
 import React from 'react'
-
-export default function Filter({searchCountry , searchRegion, darkmode}) {
+ /*
+ this component is responsible
+ for rendering seach box and select box
+ */
+export default function Filter({searchCountry , searchRegion, darkmode}) { //detructuring props passed from home components to render
    
   return (
    <div className='inputs' >
