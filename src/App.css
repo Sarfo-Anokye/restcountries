@@ -8,18 +8,20 @@
 body{
   margin:0px;
   padding:0px;
+  background: #F2F2F2;
+}
+.bodydark{
+  background: #202C36;
 }
 .main{
-  background: #F2F2F2;
-  /* padding: 0 81px; */
   height: 100%;
   margin: 0px;
   padding: 0px;
   
 }
-.App {
+/* .App {
   text-align: center;
-}
+} */
  /* styling header component */
 .header{
   background: #FFFFFF;
@@ -78,7 +80,7 @@ body{
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
   max-width: 200px;
-  width: 100%;
+  width: 200px;
   height: 56px;
 }
 .input_select select{
@@ -112,13 +114,13 @@ body{
 
 .flag_container{
   width: 100%;
-  height:50%;
+  height:46%;
 }
 .flag_container img{
  width:100%;
  object-fit: cover;
  height:100%;
- box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+ /* box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384); */
  border-radius: 5px 5px 0px 0px;
 
 }
@@ -129,9 +131,10 @@ body{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 50%;
-  /* box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
-border-radius: 5px; */
+  height: 54%;
+  background: #FFFFFF;
+   /* box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384); */
+  border-radius: 5px; 
 }
 
 .details .name{
@@ -141,7 +144,7 @@ border-radius: 5px; */
   color: #111517;
 }
 .header2{
-  margin-top: 13px;
+  margin-top: 16px;
   /* padding:2px; */
 }
 .details h2{
@@ -392,7 +395,7 @@ line-height: 44px;
 }
 .input_select{
   margin-top: 40px;
-  width: 200px;
+  /* width: 200px; */
   height: 48px;
 }
 
@@ -512,8 +515,8 @@ line-height: 44px;
 
 /* TABLET VIEW */
 
-/* @media only screen and (min-width: 601px) and (max-width: 896px) {
+@media only screen and (min-width: 601px) and (max-width: 896px) {
   .search{
     width: 390px;
   }
-} */
+}

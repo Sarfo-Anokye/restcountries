@@ -11,9 +11,13 @@ function App() {
  const [darkmode, setDarkmode]=useState(false);                  
 
 //  toggoling dark mode on and off
- const toggleDarkMode=()=>{                
-   setDarkmode(prev=>!darkmode);  
- }
+ const toggleDarkMode=()=>{               
+   setDarkmode(prev=>!darkmode);
+   document.querySelector('body').classList.toggle('bodydark');
+
+   }
+
+ 
   return (
     // routing to different componentscd 
     <Router>

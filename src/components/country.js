@@ -28,9 +28,11 @@ function Country({name,population,capital,region,subregion,flag, languages, curr
 
 // function for looping through alpha codes and passing each value to the fetchBorderNames function to fetch the api
     const bordenamesloop=(arr)=>{
-        arr.forEach(element=>{
-            fetchBorderNames(element)
-        })
+        if(arr){
+            arr.forEach(element=>{
+                fetchBorderNames(element)
+            })
+        }
     }
     useEffect(()=>{ //useEffect for calling the bordernamesLoop function
         bordenamesloop(borders)

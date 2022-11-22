@@ -30,7 +30,7 @@ export default function Details({darkmode,toggleDarkMode}) { //destruturing prop
     },[name]) //re-rendring based on the name parameter changes
 
 
-  
+  console.log(country)
   return (
     <div className={`details_container ${darkmode? 'dark' : '' }`}>
      <Header darkmode={darkmode} toggleDarkMode={toggleDarkMode}/>
