@@ -40,6 +40,7 @@ body{
   font-weight: 800;
   font-size: 24px;
   line-height: 33px;
+  /* color: #111517; */
 }
  .switch{
   font-weight: 600;
@@ -191,6 +192,7 @@ body{
 }
 .back_button{
   background: #FFFFFF; 
+  color: #111517;
   border:none;
   outline: none;
   font-weight: 300;
@@ -252,9 +254,11 @@ line-height: 44px;
   width:96px;
   margin:10px;
   background: #FFFFFF;
+  color: #111517;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
   border-radius: 2px;
   border:none;
+  
 }
 
 .detailsx img{
@@ -387,18 +391,33 @@ line-height: 44px;
 .search{
   width: 343px;
   height: 48px;
+  background: #FFFFFF;
 }
 .search input{
   margin-left:26px;
   font-size: 12px;
 
 }
+.inp,textarea{
+  background: #FFFFFF;
+}
+.inp::placeholder{
+  color:#C4C4C4;
+}
+
 .input_select{
   margin-top: 40px;
   /* width: 200px; */
   height: 48px;
+  background: #FFFFFF;
 }
-
+.selec,textarea{
+  background: #FFFFFF;
+  color: #111517;
+}
+.selec option{
+  color: #111517;
+}
 .input_select select{
   padding-right: 47px;
   padding-left: 18px;
@@ -411,9 +430,13 @@ line-height: 44px;
   margin-top: 32px;
   flex-direction: column;
   align-items: center;
+  column-gap: 0px;
   row-gap: 40px;
   
 }
+/* .country{
+  margin-bottom: 50px;
+} */
 /* end of country component */
 
 /* details component */
